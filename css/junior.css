@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%); 
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+ body {
+    font-family: "Raleway", sans-serif;
+    background-image: url(../img/bg-desktop.png);
+    background-color: var(--VeryDarkBlue);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ /* Start Project */
+ .fylo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+ }
+ @media (max-width:992px) {
+    .fylo {
+        flex-direction: column;
+    }
+    .fylo .storage .top .quote::after {
+        display: none;
+    }
+    .fylo .storage .top .quote  {
+        left: 30%;
+        top: 80px;
+    }
+    }
+    @media (max-width:767px) {
+        .fylo .storage {
+            max-width: 285px;
+        }
+        .fylo .storage .top .quote {
+            left: 10px;
+            top: 110px;
+        }
+    } 
+ .fylo .box {
+    background-color: var(--DarkBlue);
+    padding: 25px;
+    border-radius: 8px 70px 8px 8px;
+ }
+ .fylo .box .info {
+    padding-right: 75px;
+    margin-bottom: -25px;
+}
+ 
+ .fylo .box .info img {
+    margin-bottom: 20px;
+    padding-top: 25px;
+}
+
+ .fylo .box .info .icons img {
+    background-color: var(--VeryDarkBlue);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+.fylo .storage {
+    background-color: var(--DarkBlue);
+    padding: 20px 35px;
+    width: 600px;
+    border-radius: 8px;
+    align-self: flex-end;
+}
+.fylo .storage .top .ptop {
+    color: white;
+    font-size: 10px;
+    font-weight: 200;
+    letter-spacing: 1.2px;
+    margin-top: 30px;
+}
+
+.fylo .storage .top .ptop span {
+    font-weight: 500;
+}
+.fylo .storage .top .quote {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    border-radius: 13px;
+    display: flex;
+    bottom: 140%;
+}
+.fylo .storage .top .quote::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -23px;
+    z-index: 2;
+    border-style: solid;
+    border-width: 20px 35px 40px 42px;
+    border-color: transparent white transparent transparent;
+}
+
+.fylo .storage .top {
+    position: relative;
+}
+.fylo .storage .top .quote .pquote {
+    margin: auto 13px auto -10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: gray;
+    z-index: 100;
+}
+.fylo .storage .top .quote span {
+    font-size: 45px;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+}
+.fylo .storage .progress {
+    height: 20px;
+    width: 100%;
+    background-color: var(--VeryDarkBlue);
+    margin-top: 15px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.fylo .storage .progress span {
+    position: absolute;
+    height: 20px;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 20px;
+    border: 2px solid var(--VeryDarkBlue);
+}
+.fylo .storage .progress span:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 3px;
+    top: 50%;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.fylo .storage .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+}
+
+ /* End Project */
+
